@@ -1,20 +1,27 @@
-import math
-521309984bf35c270bea4f4f9864cf5e778b8518
+# https://github.com/jaxnburch-debug/lab11-JB-CM
+# Partner 1: Jackson Burch
+# Partner 2: Christian Mason
 
-def subtract(a, b):
+import math
+
+def add(a, b):
+    return a + b
+
+def sub(a, b):
     return a - b
 
-def multiply(a, b):
+def mul(a, b):
     return a * b
 
-def divide(a, b):
-    try:
-        return a / b
-    except ZeroDivisionError:
-        raise ZeroDivisionError("Cant divide by zero")
+def div(a, b):
+    if a == 0:
+        raise ZeroDivisionError
+    return b / a
 
-def logarithm(a, b):
-    return math.log(a, b)
+def log(a, b):
+    if a <= 0 or a == 1 or b <= 0:
+        raise ValueError
+    return math.log(b, a)
 
-def exponent(a, b):
+def exp(a, b):
     return a ** b
